@@ -11,9 +11,36 @@
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #3498db; /* Blue */
+    color: white;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
   }
 
   .login-container {
@@ -22,6 +49,7 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 320px;
+    margin-top: 20px;
   }
 
   .login-header {
@@ -54,18 +82,55 @@
   .login-form button:hover {
     background-color: #2980b9; /* Darker Blue */
   }
+
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+    color: #999;
+  }
+
+  .register-signin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: #333;
+  }
+
+  .register-signin a {
+    text-decoration: none;
+    color: #3498db; /* Blue */
+  }
 </style>
 </head>
 <body>
+  <div class="header">
+    <div class="logo">
+      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.etsy.com%2Ffi-en%2Flisting%2F971785327%2Fvintage-1997-looney-tunes-bugs-bunny&psig=AOvVaw2Vt_6fkLulXDBxBXw9zFQ7&ust=1692235087691000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCPCF542B4IADFQAAAAAdAAAAABAD" alt="MedTech Logo">
+      <h2>MedTech EHR</h2>
+    </div>
+    <div class="nav-links">
+      <a href="#">Region</a>
+      <a href="#">Choose your region</a>
+      <a href="#">Language</a>
+    </div>
+  </div>
   <div class="login-container">
     <div class="login-header">
-      <h1>MedTech EHR</h1>
+      <h1>Sign In</h1>
     </div>
     <form class="login-form">
-      <input type="text" placeholder="Username" required>
+      <input type="text" placeholder="User ID" required>
       <input type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
+      <button type="submit">Sign In</button>
     </form>
+    <div class="forgot-password">
+      <a href="#">Forgot your User ID or password?</a>
+    </div>
+  </div>
+  <div class="register-signin">
+    <a href="#">Register</a>
+    <a href="#">Sign In</a>
   </div>
 </body>
 </html>
